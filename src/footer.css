@@ -1,0 +1,90 @@
+.footer{
+  border: 0.2vw #610301 solid ;  
+  width: 97vw;
+  margin: 1vw;
+  background: rgb(228,175,173);
+background: linear-gradient(184deg, rgba(228,175,173,1) 0%, rgba(97,3,1,1) 100%);
+box-shadow: 2px 2px 3px black;
+}
+/* SECTOR1 */
+.sector1{
+  margin: 2vw;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Kalam', cursive;
+  border: solid #e4afad 0.15vw;
+  padding: 2vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.redes{
+  margin-left: 6vw;
+  text-shadow: 1px 1px 2px black;
+}
+.redes h2{
+  margin-top: -1vw;
+  margin-left: -3vw;
+  color: #FFD490;
+  text-shadow: 1px 1px 2px black;
+}
+.enlaces{
+  margin-left: 3vw;
+}
+a:any-link{
+  color: #FFD490;
+}
+.enlaces:hover{
+  color:  #610301;
+  text-shadow: 4px 5px 3px #9f5756;
+  transition: all 0.5s;
+  transform: scale(40.5);
+  font-size: 1.3vw;
+}
+.atencion{
+  margin-left: 13vw;
+  text-shadow: 1px 1px 2px black;
+}
+.atencion h2{
+  margin-top: -1vw;
+  margin-left: -3vw;
+  color: #FFD490;
+  text-shadow: 1px 1px 2px black;
+}
+.atencion p{
+  margin-left: -4.5vw;
+  color:  #FFD490;
+  font-size: 1.2vw;
+}
+.ubicacion{
+  margin-left: 15vw;
+  text-shadow: 1px 1px 2px black;
+}
+.ubicacion h2{
+  margin-top: -1vw;
+  margin-left: -3vw;
+  color: #FFD490;
+  text-shadow: 1px 1px 2px black;
+}
+/* SECTOR2 */
+.sector2 h2{
+  margin-left: -3vw;
+  color: #FFD490;
+  text-shadow: 1px 1px 2px black;
+}
+.sector2{
+  margin: 2vw;
+  display: flex;
+  font-family: 'Kalam', cursive;
+  justify-content: center;
+  border: dotted #e4afad 0.15vw;
+  
+}
+/* SECTOR3 */
+.sector3 p{
+  color: #FFD490;
+}
+.sector3{
+  display: flex;
+  justify-content: center;
+  
+}
