@@ -13,6 +13,7 @@ box-shadow: 2px 2px 3px black;
   flex-direction: row;
   font-family: 'Kalam', cursive;
   border: solid #e4afad 0.15vw;
+  border-radius: 1vw;
   padding: 2vw;
   padding-left: 5vw;
   padding-right: 5vw;
@@ -20,6 +21,7 @@ box-shadow: 2px 2px 3px black;
 .redes{
   margin-left: 6vw;
   text-shadow: 1px 1px 2px black;
+  text-align: center;
 }
 .redes h2{
   margin-top: -1vw;
@@ -28,7 +30,7 @@ box-shadow: 2px 2px 3px black;
   text-shadow: 1px 1px 2px black;
 }
 .enlaces{
-  margin-left: 3vw;
+  margin-left: -3.5vw;
 }
 a:any-link{
   color: #FFD490;
@@ -41,8 +43,9 @@ a:any-link{
   font-size: 1.3vw;
 }
 .atencion{
-  margin-left: 13vw;
+  margin-left: 12vw;
   text-shadow: 1px 1px 2px black;
+  text-align: center;
 }
 .atencion h2{
   margin-top: -1vw;
@@ -56,14 +59,17 @@ a:any-link{
   font-size: 1.2vw;
 }
 .ubicacion{
-  margin-left: 15vw;
+  margin-left: 8vw;
   text-shadow: 1px 1px 2px black;
+  text-align: center;
 }
 .ubicacion h2{
   margin-top: -1vw;
-  margin-left: -3vw;
   color: #FFD490;
   text-shadow: 1px 1px 2px black;
+}
+.ubicacion p{
+  color: #FFD490;
 }
 /* SECTOR2 */
 .sector2 h2{
@@ -77,6 +83,7 @@ a:any-link{
   font-family: 'Kalam', cursive;
   justify-content: center;
   border: dotted #e4afad 0.15vw;
+  border-radius: 1vw;
   
 }
 /* SECTOR3 */
@@ -87,4 +94,50 @@ a:any-link{
   display: flex;
   justify-content: center;
   
+}
+@media screen and (max-width: 725px){
+  .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sector1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .sector1 h2{
+    font-size: 5vw;
+  }
+  .redes{
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 4vw;
+  }
+  .ubicacion{
+    text-align: center;
+    margin-left: -3vw;
+  }
+  .ubicacion p{
+    font-size: 4vw;
+    text-align: center;
+    color: #FFD490;
+  }
+  .atencion{
+    margin-top: 5vw;  
+    text-align: center;
+    margin-left: -4vw;
+    margin-bottom: 4vw;
+  }
+  .atencion p{
+    font-size: 4vw;
+  }
+  .sector2{
+    display: flex;
+    border: none;
+  }
+  .enlaces:hover{
+    font-size: 5vw;
+  }
 }

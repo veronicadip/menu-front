@@ -1,4 +1,5 @@
-import './footer.css'
+import './footer.css';
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
@@ -36,6 +37,8 @@ function App() {
 </div>
 <div className='ubicacion'>
 <h2>Ubicacion</h2>
+
+  <p>Gral. Paz 576, T4000 San Miguel de Tucumán, Tucumán</p>
 
 </div>
   </div>
