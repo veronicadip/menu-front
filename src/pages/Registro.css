@@ -15,6 +15,8 @@ body{
    box-shadow: 2px 1px 3px 1px  #805452;
    background-color: #750401 ; 
    opacity: 90%;
+   margin-bottom: 2vw;
+   margin-top: 2vw;
   }
   
   .form h1 {
@@ -73,17 +75,16 @@ body{
   @media screen and (max-width: 725px){
     .form{
       width: 80vw;
-      height: 110vw;
+      height: 118vw;
       justify-content: center;
       margin: 8vw;
       align-items: center;
-      margin-top: -10vw ;
     }
     .form h1{
-      font-size: 6vw;
+      font-size: 8vw;
     }
     .form label{
-      font-size: 3vw;
+      font-size: 4vw;
     }
     .form input{
       width: auto;
