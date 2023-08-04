@@ -31,6 +31,10 @@ box-shadow: 2px 2px 3px black;
 .enlaces{
   margin-left: -3.5vw;
 }
+.redes a{
+  text-decoration: none;
+  font-size: 1.2vw;
+}
 a:any-link{
   color: #FFD490;
 }
@@ -135,6 +139,9 @@ a:any-link{
   .sector2{
     display: flex;
     border: none;
+  }
+  .redes a{
+    font-size: 3vw;
   }
   .enlaces:hover{
     font-size: 5vw;
