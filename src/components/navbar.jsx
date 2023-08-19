@@ -1,9 +1,9 @@
 import React from 'react'
 
-function navbar() {
+function NavbarComponent() {
   return (
     <div>navbar</div>
   )
 }
 
-export default navbar
+export default NavbarComponent
