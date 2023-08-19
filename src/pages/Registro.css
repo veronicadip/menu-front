@@ -62,8 +62,10 @@ body{
     cursor: pointer;
     margin-top: 1.5vw;
     font-family: 'Lato', bold;
+    font-size: 1.2vw;
     width: 18vw;
     margin-left: 2vw;
+    border-radius: 1vw;
   }
   .form .cancel{
     background-color: rgb(152, 125, 82);
@@ -98,5 +100,6 @@ body{
       display: flex;
       justify-content: center;
       margin-left: -1vw;
+      font-size: 2vw;
   }
   }
