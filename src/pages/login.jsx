@@ -1,16 +1,16 @@
 import React from 'react'
 
- const Pedidos = () => {
+const Login = () => {
     return (
         <div className='container'> 
         <div className='row'> 
         <div className='col'> 
         
-        <h1>Mi pedido</h1>
+        <h1>Login</h1>
         </div>
         </div>
         </div>
     )
 }
 
-export default Pedidos;
+export default Login;
