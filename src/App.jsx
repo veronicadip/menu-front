@@ -37,6 +37,8 @@ function App(){
            <Route path='/login' element={<Login/>}/>
            <Route path='/registro' element={<App2/>}/>
            <Route path='/pedidos' element={<Pedidos/>}/>
+           
+ 
 
            
            </Routes>
