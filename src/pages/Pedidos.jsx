@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import { Card, Button, Form } from 'react-bootstrap'
+import { useState } from 'react'
+import { Card, Button } from 'react-bootstrap'
 
 export default function Pedidos() {
     const [comidas, setComidas] = useState([
