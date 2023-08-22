@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../pages/Registro.css';
-
-<style>
+import { crearUsuario } from '../helpers/apiUsuario'
+ <style>
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 </style>
 
@@ -10,8 +10,9 @@ function App2() {
     nickname: '',
     mail: '',
     celular: '',
-    contraseña: '',
-    direccion: ''
+    password: '',
+    direccion: '',
+    rol: 'USER_ROLE'
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -21,10 +22,20 @@ function App2() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    //agregar el código para enviar los datos al servidor
-    console.log('Datos enviados:', formData);
+
+    try {
+      // Llamar a la función para crear el usuario en la base de datos
+      await crearUsuario(formData);
+
+      // Limpiar el formulario después de enviar los datos
+      setFormData(initialFormData);
+
+      console.log('Datos enviados y almacenados en la base de datos:', formData);
+    } catch (error) {
+      console.error('Error al enviar los datos:', error);
+    }
   };
 
   const handleReset = () => {
@@ -49,7 +60,7 @@ function App2() {
         </div>
         <div>
           <label>Contraseña:</label>
-          <input type="password" name="contraseña" maxLength={8} minLength={8} value={formData.contraseña} onChange={handleChange} required />
+          <input type="password" name="password" maxLength={8} minLength={8} value={formData.password} onChange={handleChange} required />
         </div>
         <div>
           <label>Dirección:</label>
