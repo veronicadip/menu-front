@@ -3,6 +3,7 @@
 }
 
 html, body {
+  background: #750401;
   margin: 0;
   padding: 0;
 }
@@ -39,7 +40,33 @@ html, body {
 
 .carousel-image {
   width: 100%;
-  height: 400px;
+  height: 500px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.boxCardMenu{
+  width: 500px;
+  height: 700px;
+}
+/*menu*/
+
+.fondoCardPizza{
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSbz2Nt9Whvu99gVVFqGubQi9qeWbn4DbHag&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+}
+
+.fondoCardHamburguesas{
+  background-image: url(https://images3.alphacoders.com/131/1313839.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fondoCardCervezas{
+  background-image: url(https://png.pngtree.com/background/20230525/original/pngtree-various-beers-on-black-background-picture-image_2734059.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

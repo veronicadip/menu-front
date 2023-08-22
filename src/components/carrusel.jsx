@@ -66,6 +66,7 @@ import Carousel from "react-bootstrap/Carousel";
 import slider1 from "../assets/pizza1.png";
 import slider2 from "../assets/burger1.png";
 import slider3 from "../assets/birra1.jpg";
+import slider4 from "../assets/local.jpg";
 import "../styles/stylehome.css";
 function Carrusel() {
   return (
@@ -87,6 +88,10 @@ function Carrusel() {
         </Carousel.Item>
         <Carousel.Item>
           <img className="carousel-image" src={slider3} alt="Third slide" />
+          <Carousel.Caption></Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="carousel-image" src={slider4} alt="Third slide" />
           <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
       </Carousel>

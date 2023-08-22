@@ -1,9 +1,9 @@
 import React from 'react'
-
-import Carrusel from '../components/Carrusel.jsx'
-import NavbarComponent from '../components/Navbar.jsx';
-import Menu from '../components/Menu';
+/*import { Carrusel } from '../components/carrusel';*/
+/*import Menu from '../components/Menu';*/
 import { Nosotras } from '../components/Nosotras';
+import Menu from '../components/menu';
+import Carrusel from '../components/carrusel';
 /*import ExampleCarouselImage from 'components/ExampleCarouselImage';*/
 
 
@@ -11,10 +11,9 @@ const  Home = () => {
   
   return (
     <>
-    <NavbarComponent />
-    <Carrusel />
-    <Menu />
-    <Nosotras />
+    <Carrusel/>
+    <Menu/>
+    <Nosotras/>
     </>
   )
 }

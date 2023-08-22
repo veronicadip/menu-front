@@ -1,118 +1,98 @@
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import { Card, Button, Container } from "react-bootstrap";
+import '../styles/stylehome.css'
+import { mostrarMenu  } from "../helpers/apiMenu";
+import React, { useEffect, useState } from "react";
 // import birraImage from '../assets/img/birra1.jpg';
 
-function Menu() {
-  return (
-    <>
-     <Card className="text-center mt-3 mx-3" style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="../assets/img/local.jpg" />{" "}
-      {/* Use the imported image */}
-      <Card.Body>
-        <Card.Title className="text-center mb-3">PIZZAS</Card.Title>
-        <Card.Text>
-          {/* Removed the <p> element */}
-          <span>Chedar con Bordes Rellenos $2000</span>{" "}
-          <span>
-            {" "}
-            <Button variant="primary">Agregar</Button>
-          </span>
-          <br />
-          <span>Jamon y Morrones $2000</span>{" "}
-          
-          <span>
-            {" "}
-            <Button variant="primary">Click me</Button>
-          </span>
-          <span>Cuatro Quesos $2000</span>{" "}
-          <span>
-            {" "}
-            <Button variant="primary">Click me</Button>
-          </span>
-          <br />
-          <span>Espinaca y Morrones $2000</span>{" "}
-          
-          <span>
-            {" "}
-            <Button variant="primary">Agregar</Button>
-          </span>
-        </Card.Text>
-      </Card.Body>
-    </Card>
-
-    <Card className="text-center mt-3 mx-3" style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="../assets/img/local.jpg" />{" "}
-      {/* Use the imported image */}
-      <Card.Body>
-        <Card.Title className="text-center mb-3">BURGERS</Card.Title>
-        <Card.Text>
-          {/* Removed the <p> element */}
-          <span>Doble Provolone $2000</span>{" "}
-          <span>
-            {" "}
-            <Button variant="primary">Click me</Button>
-          </span>
-          <br />
-          <span>Doble Chedar $2000</span>{" "}
-          
-          <span>
-            {" "}
-            <Button variant="primary">Click me</Button>
-          </span>
-          <span>Bacon $2000</span>{" "}
-          <span>
-            {" "}
-            <Button variant="primary">Click me</Button>
-          </span>
-          <br />
-          <span>Vegetariana $2000</span>{" "}
-          
-          <span>
-            {" "}
-            <Button variant="primary">Click me</Button>
-          </span>
-        </Card.Text>
-      </Card.Body>
-    </Card>
-    
-    <Card className="text-center mt-3 mx-3" style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="../assets/img/local.jpg" />{" "}
-      {/* Use the imported image */}
-      <Card.Body>
-        <Card.Title className="text-center mb-3">CERVEZA ARTESANAL</Card.Title>
-        <Card.Text>
-          {/* Removed the <p> element */}
-          <span>Honey $1500</span>{" "}
-          <span>
-            {" "}
-            <Button variant="primary">Click me</Button>
-          </span>
-          <br />
-          <span>Amber $1500</span>{" "}
-          
-          <span>
-            {" "}
-            <Button variant="primary">Click me</Button>
-          </span>
-          <span>Ipa $1500</span>{" "}
-          <span>
-            {" "}
-            <Button variant="primary">Click me</Button>
-          </span>
-          <br />
-          <span>Stout $1500</span>{" "}
-          
-          <span>
-            {" "}
-            <Button variant="primary">Click me</Button>
-          </span>
-        </Card.Text>
-      </Card.Body>
-    </Card>
-    </>
-   
-    
-  );
+function Menu() { 
+  
+  const [menu, setMenu] = useState(null);
+  useEffect(() => {
+ 
+    traerDatosMenu();
+  }, []);
+  
+  const traerDatosMenu = async() => { const{menu} =await mostrarMenu
 }
 
+
+/*const pizzas = [
+  { nombre: "Chedar Borde Relleno",precio: 2000 },
+  { nombre: "Jamon y Morrones",      precio: 2000 },
+  { nombre: "Cuatro Quesos",         precio: 2000 },
+  { nombre: "Espinaca y Morrones",  precio: 2000 },
+  
+];
+const hamburguesas = [
+  { nombre: "Doble Provolone", precio: 2000 },
+  { nombre: "Doble Chedar", precio: 2000 },
+  { nombre: "Bacon ",   precio: 2000 },
+  { nombre: "Vegetariana ", precio: 2000 },
+  
+];
+
+const bebidas = [
+  { nombre: "Honey ", precio: 1500 },
+  { nombre: "Amber ", precio: 1500 },
+  { nombre: "Ipa  ", precio:  1500 },
+  { nombre: "Stout ", precio: 1500 },
+  
+];*/
+
+return (
+
+    <Container className="d-flex flex-wrap w-100 ">
+     
+      <Card className="boxCardMenu fondoCardPizza border bg-danger p-4 ">
+        <div>
+          <h2 className="text-center">{menu.categoria}</h2>
+        </div>
+        {/*{pizzas.map((pizza, index) => (*/}
+          <div
+           /* key={index}*/
+            className="d-flex flex-wrap justify-content-between align-items-center mt-2"
+          >
+            <h4 className="mx-3">{menu.nombre}</h4>
+            <h5 className="mx-3">${menu.precio}</h5>
+            <Button variant="success">Comprar</Button>
+            <Button variant="success">Eliminar</Button>
+          </div>
+        
+      </Card>
+      </Container>
+);
+}
+      {/*<Card className="boxCardMenu fondoCardHamburguesas border bg-danger p-4 col-md-6 mb-3">
+        <div>
+          <h2 className="text-center text-white">Burgers</h2>
+        </div>
+        {hamburguesas.map((hamburguesas, index) => (
+          <div
+            key={index}
+            className="d-flex flex-wrap justify-content-between align-items-center mt-2"
+          >
+            <h4 className="mx-3 text-white">{hamburguesas.name}</h4>
+            <h5 className="mx-3 text-white">${hamburguesas.price}</h5>
+            <Button variant="success">Comprar</Button>
+          </div>
+        ))}
+      </Card>
+
+      <Card className="boxCardMenu fondoCardCervezas border bg-danger p-4">
+        <div>
+          <h2 className="text-center text-white">Bebidas</h2>
+        </div>
+        {bebidas.map((bebidas, index) => (
+          <div
+            key={index}
+            className="d-flex flex-wrap justify-content-between align-items-center mt-2"
+          >
+            <h4 className="mx-3 text-white">{bebidas.name}</h4>
+            <h5 className="mx-3 text-white">${bebidas.price}</h5>
+            <Button variant="success">Comprar</Button>
+          </div>
+        ))}
+      </Card>
+    </Container>
+  </>*/}
 export default Menu;
