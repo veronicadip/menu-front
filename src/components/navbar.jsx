@@ -22,7 +22,7 @@ export const NavbarComponent = ({logIn, logOut, auth}) => {
       <Nav className="me-auto">
       <NavLink className='nav-link' to='/'>home</NavLink>
       <NavLink className='nav-link' to='/admin'>Admin</NavLink>
-      <NavLink className='nav-link' to='/pedidos'>Mi pedido</NavLink>
+      <NavLink className='nav-link' to='/Pedidos'>Mi pedido</NavLink>
       <NavLink className='nav-link' onClick={handleShow} >Login</NavLink>
       <NavLink className='nav-link' to='/registro'>Registro</NavLink>
       </Nav>
