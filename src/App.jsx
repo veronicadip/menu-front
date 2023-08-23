@@ -9,7 +9,7 @@ import  Home  from './pages/homeScreem';
 import  Admin from './pages/admin';
 import  Login  from './pages/login';
 import  App2  from './pages/registro';
-import  Pedidos  from './pages/pedidos';
+import  Pedidos  from './pages/Pedidos';
 import {NavbarComponent} from './components/navbar';
 import { ProtectRoutes } from './routes/protectRoutes';
 import { useState } from 'react';
@@ -36,7 +36,7 @@ function App(){
           }/>
            <Route path='/login' element={<Login/>}/>
            <Route path='/registro' element={<App2/>}/>
-           <Route path='/pedidos' element={<Pedidos/>}/>
+           <Route path='/Pedidos' element={<Pedidos/>}/>
            
  
 
