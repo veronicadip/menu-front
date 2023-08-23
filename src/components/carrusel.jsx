@@ -1,22 +1,24 @@
-import React from 'react'
-/*import Pizza1 from "../assets/img/pizza1"*/
+/*import React from 'react'
+import img1 from '../assets/pizza1.png'
+import img2 from '../assets/burger1.png'
+import img3 from '../assets/birra1.jpg'
 
-export const Carrusel = () => {
+function Carrusel() {
   return (
     <div id="carouselExampleControls" className="carousel slide m-5" data-bs-ride="carousel">
         <div className="carousel-inner">
             <div className="carousel-item active">
-            <img src="./assets/pizza1.png" className="d-block w-100" alt="PIIZA DE EN HORNO DE BARRO"/>
+            <img src={img1} className="d-block w-100" alt="PIIZA DE EN HORNO DE BARRO"/>
               <h5 className="text-center">PIZZAS AL HORNO DE BARRO CON BORDES RELLENOS </h5>
                 <p className="text-center">Morrones y Jamon Cocido </p>
             </div>
             <div className="carousel-item">
-            <img src="./assets/burger1.png" className="d-block w-100" alt="BURGER"/>
+            <img src={img2} className="d-block w-100" alt="BURGER"/>
               <h5 className="text-center">LAS BURGERS MÁS INCREIBLES</h5>
               <p className="text-center">Doble Provolone</p>
             </div>
             <div className="carousel-item">
-            <img src="./assets/birra1.jpg" className="d-block w-100" alt="CERVEZA"/>
+            <img src={img3} className="d-block w-100" alt="CERVEZA"/>
               <h5 className="text-center">CERVEZA ARTESANAL</h5>
                 <p className="text-center">LAS MEJORES CERVEZAS ARTESANALES ESTAN EN NUESTRO RESTÓ</p>
             </div>  
@@ -52,8 +54,49 @@ cerveza artesanales de argentina para poder lograr una combinacion perfecta entr
 .</p>
       
       </div
-</div> */
+</div> 
     
 
   )
 }
+
+export default Carrusel;*/
+
+import Carousel from "react-bootstrap/Carousel";
+import slider1 from "../assets/pizza1.png";
+import slider2 from "../assets/burger1.png";
+import slider3 from "../assets/birra1.jpg";
+import slider4 from "../assets/local.jpg";
+import "../styles/stylehome.css";
+function Carrusel() {
+  return (
+    <div className="slider container-slider mt-4">
+      
+      <Carousel>
+        <Carousel.Item interval={3000}>
+          <img className="carousel-image" src={slider1} alt="First slide" />
+          <Carousel.Caption>
+            
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={3000}>
+          <img className="carousel-image" src={slider2} alt="Second slide" />
+          <Carousel.Caption>
+            <h5>esto es un h5</h5>
+            <p>esto es un p</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="carousel-image" src={slider3} alt="Third slide" />
+          <Carousel.Caption></Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="carousel-image" src={slider4} alt="Third slide" />
+          <Carousel.Caption></Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    </div>
+  );
+}
+
+export default Carrusel;
