@@ -1,9 +1,7 @@
-/*import React from 'react'
-import Home from './pages/home'
-
-*/
-
+import React from 'react'
+/*import Home from './pages/home'*/
 //import './App.css';
+
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import  Home  from './pages/homeScreem';
 import  Admin from './pages/admin';
