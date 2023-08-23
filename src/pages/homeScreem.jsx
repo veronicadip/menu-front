@@ -9,7 +9,7 @@ import { Nosotras } from '../components/Nosotras'
 import Menu from '../components/Menu'
 //import Carrusel from '../components/carrusel';
 /*import ExampleCarouselImage from 'components/ExampleCarouselImage';*/
-
+import '../styles/stylehome.css'
 
 const  Home = () => {
   
