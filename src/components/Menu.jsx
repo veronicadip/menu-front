@@ -12,7 +12,7 @@ function Menu() {
 const [productos, setProductos] = useState([{ _id: 0 }]); // Usaremos un estado para almacenar los productos
 const [totalproductos, setTotalproductos] = useState(0);
 
- //manejar pagina
+ //para paginacion 
  const limite = 6;
  const [pagina, setPagina] = useState(0);
 

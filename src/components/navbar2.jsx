@@ -21,8 +21,9 @@ const NavbarSinRutas = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-5 d-flex justify-content-end">
-            <Nav.Link href="../pages/homeScreem">Inicio</Nav.Link>
-            <Nav.Link to='/registro'>Registro</Nav.Link>
+            <Nav.Link href="#homeScreem">Inicio</Nav.Link>
+            <Nav.Link href="#registro">Registro</Nav.Link>
+            <Nav.Link href="/pedidos">Mis Pedidos</Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Container>

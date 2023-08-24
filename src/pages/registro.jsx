@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../pages/Registro.css';
 import { crearUsuario } from '../helpers/apiUsuario'
+import NavbarSinRutas from '../components/navbar2';
  <style>
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 </style>
@@ -43,6 +44,7 @@ function App2() {
   };
   
   return (
+    
     <div className="form">
       <h1>Formulario de Registro</h1>
       <form onSubmit={handleSubmit}>

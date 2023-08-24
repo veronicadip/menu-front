@@ -5,9 +5,10 @@
 // import "./App.css";
 //import ModalLogin from "./pages/login";
 import React from 'react'
-import Home from './pages/homeScreem'
+//import Home from './pages/homeScreem'
 //import NavbarComponent from './components/navbar';
 //import Pedidos from './pages/pedidos';
+import App2 from './pages/registro';
 //import ModalLogin from './pages/login';
 function App() {
   //Estados para manejar login y datos de usuario
@@ -32,7 +33,7 @@ function App() {
   return (
     <>
     
-    <Home/>
+    <App2/>
     </>
   );
 }

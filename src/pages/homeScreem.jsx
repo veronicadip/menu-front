@@ -21,12 +21,13 @@ const  Home = () => {
   
   return (
     <> 
+    
     <NavbarSinRutas/>
     <Carrusel/>
     <Menu/>
     <Nosotras/>
     <Footer/>
-    </>
+      </>
   )
 }
 export default Home;

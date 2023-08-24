@@ -32,7 +32,7 @@ html, body {
   max-width: 85%;
   margin-bottom: 5em;
   overflow: hidden;
-  height: 400px;
+ /* height: 400px;*/
 }
 
 .carousel-item {
@@ -46,10 +46,10 @@ html, body {
   border-radius: 10px;
 }
 
-.boxCardMenu{
+/*.boxCardMenu{
   width: 700px !important;
   height: 700px !important;
-}
+}*/
 /*menu*/
 .letramenu {
   font-weight: bold;
