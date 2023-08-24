@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 import "../styles/navbar.css"
 
-export const NavbarComponent = ({cerrarSesion,user}) => {
+const NavbarComponent = ({}) => {
 
   return ( 
    <> <Navbar expand="lg" className="--navbar">
@@ -39,3 +39,14 @@ export const NavbarComponent = ({cerrarSesion,user}) => {
 );
 }
  export default NavbarComponent;
+
+
+
+
+
+
+
+
+
+
+

@@ -7,6 +7,8 @@ import Menu from '../components/Menu';
 import Carrusel from '../components/carrusel';
 import '../styles/stylehome.css';
 
+
+
 import Footer from '../components/footer';
 
 <style>

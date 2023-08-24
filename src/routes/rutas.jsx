@@ -1,37 +1,48 @@
-import { Routes, Route } from 'react-router-dom';
+import React from 'react'
+/*import Home from './pages/home'*/
+//import './App.css';
+
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import  Home  from '../pages/homeScreem';
 import  Admin from '../pages/admin';
+
 import  App2  from '../pages/registro';
 import  Pedidos  from '../pages/pedidos';
-import ModalLogin from '../pages/login';
 import NavbarComponent from '../components/navbar';
-import ProtectRoutesAdmin from "./protectRoutesAdmin"
-//import { ProtectRoutes } from './routes/protectRoutes';
-//import { useState } from 'react';
-//import ModalLogin from './components/login';
+import ProtectRoutes from './protectRoutes';
+import { useState } from 'react';
+import ModalLogin from '../pages/login';
 
-const Rutas= ({cerrarSesion,user}) => {
+function Rutas(){
 
- 
-  
-  return(
-    <> 
-            <NavbarComponent cerrarSesion={cerrarSesion} user={user} />
-            <Routes>
-           <Route path='/homeScreem' element={<Home/>}/>
-           <Route path='/registro' element={<App2/>}/>
-           <Route path='/pedidos' element={<Pedidos/>}/>
-           <Route path='/login' element={<ModalLogin/>}/>
-           <Route
-            path='/admin'
-            element={
-           <ProtectRoutesAdmin  user={user}>
+  const [auth, setAuth] = useState (false);
+
+  const LogIn = () => {
+        setAuth(true);
+  };
+
+  const LogOut = () => {
+     setAuth(false);
+  }
+  return( <BrowserRouter>
+            <NavbarComponent  />
+            <ModalLogin logIn={LogIn} logOut={LogOut} auth={auth}/>
+           <Routes>
+           <Route path='/' element={<Home/>}/>
+           <Route path='/admin' element={
+           <ProtectRoutes auth={auth}>
             <Admin/>
-            </ProtectRoutesAdmin>
+            </ProtectRoutes>
           }/>
-        </Routes>
-   </>
-  );
-};
+          <Route path='/login' element={<ModalLogin/>}/>
+           <Route path='/registro' element={<App2/>}/>
+           <Route path='/Pedidos' element={<Pedidos/>}/>
+           
+ 
+
+           
+           </Routes>
+          </BrowserRouter>)
+}
 
 export default Rutas;
