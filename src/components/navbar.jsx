@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar,Nav,Container,Button } from 'react-bootstrap';
 //import { useState } from 'react';
-import  NavLink  from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import Rutas from '../routes/rutas';
 import "../styles/navbar.css"
 
