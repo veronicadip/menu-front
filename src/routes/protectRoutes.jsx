@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 
 
 
- const ProtectRoutes = ({children, login})  => {
+ const ProtectRoutes = ({children, auth})  => {
     if(login){
         return children; 
     } else { return  <Navigate to='/'/>
