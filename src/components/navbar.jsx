@@ -17,11 +17,11 @@ export const NavbarComponent = ({logIn, logOut, auth}) => {
    <>
    <Navbar expand="lg" className="--navbar">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
         <img
               src="https://png.pngtree.com/png-clipart/20230805/original/pngtree-pizza-icon-cut-knife-cheese-vector-picture-image_9811651.png"
-              width="30"
-              height="30"
+              width="50"
+              height="50"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />

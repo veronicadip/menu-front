@@ -10,7 +10,7 @@ function App2() {
     nickname: '',
     mail: '',
     celular: '',
-    password: '',
+    passwordm: '',
     direccion: '',
     rol: 'USER_ROLE'
   };

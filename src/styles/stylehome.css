@@ -1,30 +1,75 @@
-.carousel-inner {
-    max-height: 700px;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.fotoCarousel {
-    max-height: 700px;
-    object-fit: cover;
+html, body {
+  background: #E9D3B0 !important ; 
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif !important;
 }
-.container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+
+
+
+.container-slider .box {
+  position: relative;
+  width: 19em;
+  height: 19em;
+  margin: 4rem;
+}
+
+.container-slider .box:hover .imgBox {
+  transform: translate(-3.5rem, -3.5rem);
+}
+
+.container-slider .box:hover .contenido {
+  transform: translate(3.5rem, 3.5rem);
+}
+
+.slider {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 85%;
+  margin-bottom: 5em;
+  overflow: hidden;
+  height: 400px;
+}
+
+.carousel-item {
+  height: 400px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.boxCardMenu{
+  width: 700px !important;
+  height: 700px !important;
+}
+/*menu*/
+.letramenu {
+  font-weight: bold;
+}
+
+.fondoCardPizza{
+  background-image: url(https://i.pinimg.com/564x/09/a3/4e/09a34e72f8e126bb8857697d1d2e56fb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   
-  .container .box {
-    position: relative;
-    width: 19em;
-    height: 19em;
-    margin: 4rem;
   }
-  
-  .container .box:hover .imgBox {
-    transform: translate(-3.5rem, -3.5rem);
-  }
-  
-  .container .box:hover .contenido {
-    transform: translate(3.5rem, 3.5rem);
-  }
+
+.fondoCardHamburguesas{
+  background-image: url(https://images3.alphacoders.com/131/1313839.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fondoCardCervezas{
+  background-image: url(https://png.pngtree.com/background/20230525/original/pngtree-various-beers-on-black-background-picture-image_2734059.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
