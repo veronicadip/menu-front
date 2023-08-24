@@ -1,12 +1,13 @@
 import React from 'react'
+import "../styles/stylenosotras.css"
 
 export const Nosotras = () => {
   return (
     <>
 
-    /*nosotras*/
+    
 <h2 className="text-center py-5">Sobre Nosotras</h2>
-        <div className="container mb-5">
+        <div className="container mb-5 imgnosotras">
             <div className="box">
                 <div className="imgBox">
                     <img src="../assets/anita.jpeg" alt="Anita Guzman" className="rounded"/>
@@ -20,7 +21,7 @@ export const Nosotras = () => {
 
             <div className="box">
                 <div className="imgBox">
-                    <img src="../assets/Flor.jpeg" alt="Flor Quiroga" className="rounded"/>
+                    <img src="../assets/Flor.jpeg" alt="Flor Quiroga" className="rounded imgnosotras"/>
                 </div>
                 <div className="contenido">
                     <h3>Florencia Quiroga</h3>
