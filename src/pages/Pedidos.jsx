@@ -1,8 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Card, Button } from 'react-bootstrap'
+import { Form } from 'react-bootstrap';
 
-export default function Pedidos() {
+
+function Pedidos() {
     const [comidas, setComidas] = useState([
         {
             id: 1,
@@ -63,6 +65,7 @@ export default function Pedidos() {
     }
 
     return (
+        <>  
         <div>
             <div className='px-5 d-flex flex-column gap-4 container'>
                 <div className='overflow-auto' style={{ height: "60vh" }}>
@@ -104,5 +107,10 @@ export default function Pedidos() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
+
+
+
+ export default Pedidos;
