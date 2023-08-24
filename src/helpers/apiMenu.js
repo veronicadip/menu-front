@@ -2,20 +2,19 @@ const url= "https://proyecto-menu.onrender.com/api/menu";
 
 const token = JSON.parse(localStorage.getItem("token"));
 
-
-
 export const mostrarMenu = async (limite = 0, pagina = 0) => {
-    try {
-      const resp = await fetch(url + "?limite=" + limite + "&desde=" + pagina);
-      const data = await resp.json();
-  
-      return data;
-    } catch (error) {
-      console.log(error);
-      throw new Error("No se pudo obtener la info");
-    }
-  };
-  
+  try {
+    const resp = await fetch(url + "?limite=" + limite + "&desde=" + pagina);
+    const data = await resp.json();
+
+    return data;
+  } catch (error) {
+    console.log(error);
+    throw new Error("No se pudo obtener la info");
+  }
+};
+
+
  
   
   export const agregarProductos = async (datos) => {

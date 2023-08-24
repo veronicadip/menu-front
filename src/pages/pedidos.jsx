@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { Form } from 'react-bootstrap';
 
@@ -65,6 +65,7 @@ function Pedidos() {
     }
 
     return (
+        <>  
         <div>
             <div className='px-5 d-flex flex-column gap-4 container'>
                 <div className='overflow-auto' style={{ height: "60vh" }}>
@@ -106,6 +107,7 @@ function Pedidos() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
