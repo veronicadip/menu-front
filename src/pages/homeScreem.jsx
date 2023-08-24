@@ -6,8 +6,10 @@ import { Nosotras } from '../components/Nosotras';
 import Menu from '../components/Menu';
 import Carrusel from '../components/carrusel';
 import '../styles/stylehome.css';
-import { NavbarComponent } from '../components/navbar';
-import footer from '../components/footer';
+
+
+
+import Footer from '../components/footer';
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
@@ -23,7 +25,7 @@ const  Home = () => {
     <Carrusel/>
     <Menu/>
     <Nosotras/>
-    <footer/>
+    <Footer/>
     </>
   )
 }

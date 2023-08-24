@@ -1,6 +1,14 @@
+//import React,  { useState }from 'react';
+//import Button from 'react-bootstrap/Button';
+//import Form from 'react-bootstrap/Form';
+//import { ingresarLogin } from '../helpers/apiLogin'
+//import { useNavigate } from "react-router-dom";
+//import MessageApp from '../components/message';       
+
+
 import React from 'react'
 
-const Login = () => {
+const ModalLogin = () => {
     return (
         <div className='container'> 
         <div className='row'> 
@@ -13,4 +21,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default ModalLogin;

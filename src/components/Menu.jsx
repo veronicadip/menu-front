@@ -1,56 +1,61 @@
-/*import { Card, Button, Container } from "react-bootstrap";*/
+import { Card, Container } from "react-bootstrap";
 import '../styles/stylehome.css'
 import { mostrarMenu  } from "../helpers/apiMenu";
 import React, { useEffect, useState } from "react";
-import { traerCategoria } from "../helpers/apiCategoria";
+//import { traerCategoria } from "../helpers/apiCategoria";
 // import birraImage from '../assets/img/birra1.jpg';
 
 
 function Menu() { 
   
-const infoMenu ={
-  nombre: '',
-  precio: '',
-  categoria: '', 
-  descrpcion: '', 
-  foto: '',
-}
-const [productos, setProductos] = useState([]); // Usaremos un estado para almacenar los productos
+//ver Menu 
+const [productos, setProductos] = useState([{ _id: 0 }]); // Usaremos un estado para almacenar los productos
+const [totalproductos, setTotalproductos] = useState(0);
+
+ //manejar pagina
+ const limite = 6;
+ const [pagina, setPagina] = useState(0);
+
 
   useEffect(() => {
     traerMenuBD(); // Llama a la función para obtener los productos del backend
-  }, []);
+  }, [pagina]);
 
 const traerMenuBD = async ( ) => {
   try {
-    const { producto } = await mostrarMenu(); // Obtén los productos desde la API
-
-    setProductos(producto); // Actualiza el estado con los productos obtenidos
+   const { productos,total } = await mostrarMenu(limite,pagina);{ // Obtén los productos desde la API
+    console.log("Se trajo los datos ", productos )}
+    setProductos(productos);
+    setTotalproductos(total);
+ 
   } catch (error) {
     console.error("Error al obtener los productos:", error);
   }
 };
+
   
 
 
 
 return ( 
   <>
-        
+        <Container className="d-flex flex-wrap w-100 ">
         <div>
         <h2 className="text-center">Pizza</h2>
       </div>
-      {productos.map((producto, index) => (
-        <Card key={index} className="m-2" style={{ width: "18rem" }}>
+      {productos && (
+     
+        <Card  className="m-2" style={{ width: "18rem" }}>
           {/* Agrega la información del producto a la tarjeta */}
-          <Card.Img variant="top" src={producto.foto} alt={producto.nombre} />
+          <Card.Img variant="top" src={productos.foto} alt={productos.nombre} />
           <Card.Body>
-            <Card.Title>{producto.nombre}</Card.Title>
-            <Card.Text>{producto.descripcion}</Card.Text>
-            <Card.Text>Precio: ${producto.precio}</Card.Text>
+            <Card.Title>Nombre:{productos.nombre}</Card.Title>
+            <Card.Text>Descripcion:{productos.descripcion}</Card.Text>
+            <Card.Text>Precio: ${productos.precio}</Card.Text>
           </Card.Body>
         </Card>
-      ))}
+       )}
+          </Container>
 </>
 
 )
