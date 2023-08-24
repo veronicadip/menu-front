@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import { Card, Button } from 'react-bootstrap'
+import { Form } from 'react-bootstrap';
 
-export default function Pedidos() {
+
+function Pedidos() {
     const [comidas, setComidas] = useState([
         {
             id: 1,
@@ -109,4 +111,4 @@ export default function Pedidos() {
 
 
 
- 
+ export default Pedidos;

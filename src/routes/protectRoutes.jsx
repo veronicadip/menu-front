@@ -1,10 +1,13 @@
-import React from "react";
 import { Navigate } from "react-router-dom";
 
 
-export const ProtectRoutes = ({children, auth})  => {
-    if(auth){
+
+
+ const ProtectRoutes = ({children, login})  => {
+    if(login){
         return children; 
     } else { return  <Navigate to='/'/>
     }
-}
+};
+
+export default ProtectRoutes;

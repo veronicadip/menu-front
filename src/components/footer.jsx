@@ -5,7 +5,7 @@ import '../components/footer.css';
   @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
 </style>
 
-function App() {
+function Footer() {
  
 
   return (
@@ -55,4 +55,4 @@ function App() {
   )
 }
 
-export default App
+export default Footer;
