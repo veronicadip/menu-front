@@ -19,8 +19,8 @@ function Carrusel() {
         <Carousel.Item interval={3000}>
           <img className="carousel-image" src={slider2} alt="Second slide" />
           <Carousel.Caption>
-            <h5>esto es un h5</h5>
-            <p>esto es un p</p>
+            <h5>Bienvenido </h5>
+            <p>Las Kangregurs de Julio</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>

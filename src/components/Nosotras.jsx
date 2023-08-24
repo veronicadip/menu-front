@@ -68,15 +68,7 @@ export const Nosotras = () => {
                         <span>Desarrollo Web</span>
                     </div>
                 </Col>
-                <Col  xs={12} md={2} className="d-flex flex-column align-items-center">
-                <div className="d-flex justify-content-center align-items-center">
-                    <img src="" alt="Anita Guzman" className="rounded" style={{ width: '10rem', height:'10rem',marginStart:'10px' }}/>
-                </div>
-                <div className="contenido">
-                    <h3>FEDE</h3>
-                       <span>Desarrollo Web</span>
-                    </div>
-            </Col>
+                
                 </Row>
         </div>
 
