@@ -25,8 +25,7 @@ function Rutas(){
      setAuth(false);
   }
   return( <BrowserRouter>
-            <NavbarComponent  />
-            <ModalLogin logIn={LogIn} logOut={LogOut} auth={auth}/>
+            <NavbarComponent logIn={LogIn} logOut={LogOut} auth={auth} />
            <Routes>
            <Route path='/' element={<Home/>}/>
            <Route path='/admin' element={
@@ -36,7 +35,7 @@ function Rutas(){
           }/>
           <Route path='/login' element={<ModalLogin/>}/>
            <Route path='/registro' element={<App2/>}/>
-           <Route path='/Pedidos' element={<Pedidos/>}/>
+           <Route path='/pedidos' element={<Pedidos/>}/>
            
  
 

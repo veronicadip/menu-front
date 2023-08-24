@@ -1,0 +1,28 @@
+
+html, body {
+    background: #E9D3B0 !important ; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif !important;
+  }
+  
+.vh-100{
+    margin-top: 15rem;
+    box-shadow: 5px 10px;
+    
+}
+
+.d-flex .lead{
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.form-outline .form-control{
+    background-color:#d3d3d3;
+}
+
+
+.btn{
+    background-color:#c57d56;
+}

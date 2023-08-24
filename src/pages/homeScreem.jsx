@@ -6,7 +6,7 @@ import { Nosotras } from '../components/Nosotras';
 import Menu from '../components/Menu';
 import Carrusel from '../components/carrusel';
 import '../styles/stylehome.css';
-
+import NavbarSinRutas from '../components/navbar2';
 
 
 import Footer from '../components/footer';
@@ -22,11 +22,12 @@ const  Home = () => {
   return (
     <> 
     
+    <NavbarSinRutas/>
     <Carrusel/>
     <Menu/>
     <Nosotras/>
     <Footer/>
-    </>
+      </>
   )
 }
 export default Home;
