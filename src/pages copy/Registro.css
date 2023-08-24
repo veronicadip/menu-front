@@ -1,0 +1,102 @@
+body{
+    background: radial-gradient(circle, rgb(232, 200, 150) 33%, rgba(154,119,85,1) 100%);
+    width: auto;
+  }
+  .form {
+    width: 50vw;
+    height: 48vw;
+    padding: 1vw;
+    border: 2px dotted  rgb(232, 200, 150);
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+   margin-left: 25vw;
+   align-items: center;
+   box-shadow: 2px 1px 3px 1px  #805452;
+   background-color: #750401 ; 
+   opacity: 90%;
+   margin-bottom: 2vw;
+   margin-top: 2vw;
+  }
+  
+  .form h1 {
+    text-align: center;
+    margin-bottom: 1vw;
+    color:  rgb(255, 255, 255);
+    text-shadow: 3px 3px 3px #750401;
+    font-family: 'Lato', sans-serif;
+  
+  }
+  
+  .form form {
+    display: flex;
+    flex-direction: column;
+    margin:2vw;
+    text-align: center;
+  }
+  
+  .form label {
+    margin-bottom: 1.2vw;
+    color: white ;
+    text-shadow: 2px 2px 3px #750401;
+    font-size: 1.2vw;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .form input {
+    padding: 0.6vw;
+    border-radius: 0.8vw;
+    margin: 0.5vw;
+    background-color:rgb(232, 200, 150);
+    color: #750401;
+    opacity: 90%;
+    width: 20vw;
+    display: flex;
+  }
+  
+  .form button {
+    background-color: rgb(233, 211, 176);
+    color: #750401;
+    border: 2px dotted rgb(211, 175, 117);
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 1.5vw;
+    font-family: 'Lato', bold;
+    width: 18vw;
+    margin-left: 2vw;
+  }
+  .form .cancel{
+    background-color: rgb(152, 125, 82);
+  }
+  .form button:hover {
+    background-color: #a4807f;
+    opacity: 80%;
+  }
+  @media screen and (max-width: 725px){
+    .form{
+      width: 80vw;
+      height: 118vw;
+      justify-content: center;
+      margin: 8vw;
+      align-items: center;
+    }
+    .form h1{
+      font-size: 8vw;
+    }
+    .form label{
+      font-size: 4vw;
+    }
+    .form input{
+      width: auto;
+      display: flex;
+      margin-bottom: 2.5vw;
+      border-radius: 2vw;
+      padding: 1vw;
+    }
+    .form button{
+      width: auto;
+      display: flex;
+      justify-content: center;
+      margin-left: -1vw;
+  }
+  }

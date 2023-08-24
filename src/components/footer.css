@@ -1,0 +1,149 @@
+.footer{
+  border-top: 0.2vw #610301 solid ;  
+  width: 100%;
+  background: rgb(228,175,173);
+background: linear-gradient(184deg, rgba(228,175,173,1) 0%, rgba(97,3,1,1) 100%);
+box-shadow: 2px 2px 3px black;
+}
+/* SECTOR1 */
+.sector1{
+  margin: 2vw;
+  display: flex;
+  flex-direction: row;
+  font-family: 'lato' bold;
+  border: 0.1vw solid rgb(232, 200, 150);
+  border-radius: 1vw;
+  padding: 2vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.redes{
+  margin-left: 6vw;
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+}
+.redes h2{
+  margin-top: -1vw;
+  margin-left: -3vw;
+  color: #FFD490;
+  text-shadow: 1px 1px 2px #610301;
+}
+.enlaces{
+  margin-left: -3.5vw;
+}
+.redes a{
+  text-decoration: none;
+  font-size: 1.2vw;
+}
+a:any-link{
+  color: #FFD490;
+}
+.enlaces:hover{
+  color:  #610301;
+  text-shadow: 4px 5px 3px #9f5756;
+  transition: all 0.5s;
+  transform: scale(40.5);
+  font-size: 1.3vw;
+}
+.atencion{
+  margin-left: 12vw;
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+}
+.atencion h2{
+  margin-top: -1vw;
+  margin-left: -3vw;
+  color: #FFD490;
+  text-shadow: 1px 1px 2px #610301;
+}
+.atencion p{
+  margin-left: -4.5vw;
+  color:  #FFD490;
+  font-size: 1.2vw;
+}
+.ubicacion{
+  margin-left: 8vw;
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+}
+.ubicacion h2{
+  margin-top: -1vw;
+  color: #FFD490;
+  text-shadow: 1px 1px 2px #610301;
+}
+.ubicacion p{
+  color: #FFD490;
+}
+/* SECTOR2 */
+.sector2 h2{
+  margin-left: -3vw;
+  color: #FFD490;
+  text-shadow: 1px 1px 2px #610301;
+}
+.sector2{
+  margin: 2vw;
+  display: flex;
+  font-family: 'Lato' bold;
+  justify-content: center;
+  border: dotted rgb(232, 200, 150);
+  border-radius: 1vw;
+  
+}
+/* SECTOR3 */
+.sector3 p{
+  color: #FFD490;
+}
+.sector3{
+  display: flex;
+  justify-content: center;
+  
+}
+@media screen and (max-width: 725px){
+  .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sector1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .sector1 h2{
+    font-size: 5vw;
+  }
+  .redes{
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 4vw;
+  }
+  .ubicacion{
+    text-align: center;
+    margin-left: -3vw;
+  }
+  .ubicacion p{
+    font-size: 4vw;
+    text-align: center;
+    color: #FFD490;
+  }
+  .atencion{
+    margin-top: 5vw;  
+    text-align: center;
+    margin-left: -4vw;
+    margin-bottom: 4vw;
+  }
+  .atencion p{
+    font-size: 4vw;
+  }
+  .sector2{
+    display: flex;
+    border: none;
+  }
+  .redes a{
+    font-size: 3vw;
+  }
+  .enlaces:hover{
+    font-size: 5vw;
+  }
+}
