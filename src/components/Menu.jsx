@@ -40,8 +40,8 @@ return (
         <div>
         <h2 className="text-center">Pizza</h2>
       </div>
-      {productos.map((producto, index) => (
-        <Card key={index} className="m-2" style={{ width: "18rem" }}>
+      {productos.map((producto) => (
+        <Card key={producto._id} className="m-2" style={{ width: "18rem" }}>
           {/* Agrega la información del producto a la tarjeta */}
           <Card.Img variant="top" src={producto.foto} alt={producto.nombre} />
           <Card.Body>
