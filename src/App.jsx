@@ -1,46 +1,56 @@
-import React from 'react'
-/*import Home from './pages/home'*/
-//import './App.css';
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import  ProtectRoutes from "./routes/protectRoutes";
+import Rutas from "./routes/rutas";
+// import "./App.css";
+import ModalLogin from "./pages/login";
 
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import  Home  from './pages/homeScreem';
-import  Admin from './pages/admin';
-import  Login  from './pages/login';
-import  App2  from './pages/registro';
-import  Pedidos  from './pages/Pedidos';
-import {NavbarComponent} from './components/navbar';
-import { ProtectRoutes } from './routes/protectRoutes';
-import { useState } from 'react';
+function App() {
+  //Estados para manejar login y datos de usuario
+  const [login, setLogin] = useState(false);
+  const [user, setUser] = useState(null);
 
-function App(){
-
-  const [auth, setAuth] = useState (false);
-
-  const LogIn = () => {
-        setAuth(true);
+  //Función para guardar datos del usuario autenticado
+  const guardarUsuario = (datos) => {
+    setUser(datos);
   };
 
-  const LogOut = () => {
-     setAuth(false);
-  }
-  return( <BrowserRouter>
-            <NavbarComponent logIn={LogIn} logOut={LogOut} auth={auth} />
-           <Routes>
-           <Route path='/' element={<Home/>}/>
-           <Route path='/admin' element={
-           <ProtectRoutes auth={auth}>
-            <Admin/>
-            </ProtectRoutes>
-          }/>
-           <Route path='/login' element={<Login/>}/>
-           <Route path='/registro' element={<App2/>}/>
-           <Route path='/Pedidos' element={<Pedidos/>}/>
-           
- 
+  //Función cuando inicia sesión
+  const iniciarSesion = () => {
+    setLogin(true);
+  };
 
-           
-           </Routes>
-          </BrowserRouter>)
+  //Función cuando cierra sesión
+  const cerrarSesion = () => {
+    setLogin(false);
+  };
+
+  return (
+    <BrowserRouter>
+      <Routes>
+      {/*Rutas protegidas que reciben login, datos de usuario y función cerrar sesión*/}
+      <Route
+        path="/"
+        element={
+          <ProtectRoutes login={login}>
+            <Rutas cerrarSesion={cerrarSesion} user={user} />
+          </ProtectRoutes>
+        }
+      />
+      <Route
+          path="/login"
+          element={
+            <ModalLogin
+              iniciarSesion={iniciarSesion}
+              guardarUsuario={guardarUsuario}
+            />
+          }
+        />
+        
+    
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

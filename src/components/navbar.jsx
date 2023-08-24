@@ -1,16 +1,8 @@
 import React from 'react';
-import { Navbar,Nav,Container } from 'react-bootstrap';
-import { useState } from 'react';
-import {NavLink} from 'react-router-dom';
-import ModalLogin from './login';
-
-export const NavbarComponent = ({logIn, logOut, auth}) => {
-
- //login modal no borrar
- const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+import { Navbar,Nav,Container,Button } from 'react-bootstrap';
+//import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+ const NavbarComponent = ({cerrarSesion,user}) => {
 
   return ( 
    <>
@@ -21,16 +13,22 @@ export const NavbarComponent = ({logIn, logOut, auth}) => {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
       <NavLink className='nav-link' to='/'>home</NavLink>
+
+             
       <NavLink className='nav-link' to='/admin'>Admin</NavLink>
+
       <NavLink className='nav-link' to='/Pedidos'>Mi pedido</NavLink>
-      <NavLink className='nav-link' onClick={handleShow} >Login</NavLink>
+      <NavLink className='nav-link' to='/login' >Login</NavLink>
       <NavLink className='nav-link' to='/registro'>Registro</NavLink>
       </Nav>
+      <Button variant='primary' className="btn nav-link" onClick={cerrarSesion}>
+                Cerrar sesión
+              </Button>
     </Navbar.Collapse>
   </Container>
 </Navbar>
-<ModalLogin show={show} handleClose={handleClose} />
+  
 </>
 );
 }
- 
+ export default NavbarComponent;
