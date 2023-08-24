@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navbar,Nav,Container,Button } from 'react-bootstrap';
 //import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-
+import  NavLink  from 'react-router-dom';
+import Rutas from '../routes/rutas';
 import "../styles/navbar.css"
 
-const NavbarComponent = ({}) => {
+const NavbarComponent = ({logIn, logOut, auth}) => {
 
   return ( 
    <> <Navbar expand="lg" className="--navbar">
@@ -27,12 +27,12 @@ const NavbarComponent = ({}) => {
             <NavLink className='nav-link' to='/pedidos'>Mi pedido</NavLink>
             <NavLink className='nav-link' to='/login' >Login</NavLink>
             <NavLink className='nav-link' to='/registro'>Registro</NavLink>
-            <Button variant='primary' className="btn nav-link" onClick={cerrarSesion}>
-                Cerrar sesión
-              </Button>
+           
           </Nav>
         </Navbar.Collapse>
+        <Button variant="danger" onClick={() =>  auth? logOut() : logIn()}>{auth ? 'Cerrar Sesion' :'Loguearse' }</Button>{' '}
       </Container>
+          
     </Navbar>
 
 </>
