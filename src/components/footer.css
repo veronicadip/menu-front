@@ -2,8 +2,8 @@
   border-top: 0.2vw #610301 solid ;  
   width: 100%;
   background: rgb(228,175,173);
-background: linear-gradient(184deg, rgba(228,175,173,1) 0%, rgba(97,3,1,1) 100%);
-box-shadow: 2px 2px 3px black;
+  background: linear-gradient(184deg, rgba(228,175,173,1) 0%, rgba(97,3,1,1) 100%);
+  box-shadow: 2px 2px 3px black;
 }
 /* SECTOR1 */
 .sector1{
